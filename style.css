@@ -848,6 +848,431 @@ footer p{
     display: flex;
 }
 
+
+
+/*==================== RESPONSIVE DESIGN ====================*/
+
+/* TABLET DEVICES (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+    
+    section nav ul li {
+        margin: 0 10px;
+    }
+    
+    section nav ul li a {
+        font-size: 14px;
+    }
+    
+    section .main {
+        flex-direction: column;
+        align-items: center;
+        top: 100px;
+    }
+    
+    section .main .men_text h1 {
+        font-size: 45px;
+        top: -50px;
+    }
+    
+    section .main .main_image img {
+        width: 500px;
+        left: 0;
+    }
+    
+    section p {
+        width: 90%;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    section .main_btn {
+        left: 0;
+        margin: 20px auto;
+    }
+    
+    .about .about_main {
+        flex-direction: column;
+    }
+    
+    .about .about_main .image img {
+        width: 600px;
+    }
+    
+    .about .about_main .about_text p {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .about .about_btn {
+        display: block;
+        text-align: center;
+        width: 150px;
+        margin: 30px auto;
+        left: 0;
+        bottom: 0;
+    }
+    
+    .menu .menu_box {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .gallary .gallary_image_box {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .review .review_box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .review .review_box .review_card {
+        margin: 15px 8px;
+    }
+    
+    .order .order_main {
+        flex-direction: column;
+    }
+    
+    .order .order_main .order_image img {
+        width: 400px;
+        margin-bottom: 20px;
+    }
+    
+    .order .order_main form {
+        grid-template-columns: 1fr;
+    }
+    
+    .order .order_main form .order_btn {
+        grid-column: span 1;
+    }
+    
+    .order .order_main form .input input {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    footer .footer_main {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+/* MOBILE DEVICES (up to 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* Navigation */
+    section nav {
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+    
+    section nav .logo img {
+        width: 60px;
+    }
+    
+    section nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+    }
+    
+    section nav ul li {
+        display: block;
+        margin: 10px 20px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+    
+    section nav ul li a {
+        font-size: 14px;
+    }
+    
+    section nav .icon {
+        display: flex;
+        gap: 10px;
+    }
+    
+    section nav .icon i {
+        font-size: 16px;
+    }
+    
+    /* Main Hero Section */
+    section .main {
+        flex-direction: column;
+        top: 80px;
+        padding: 20px;
+    }
+    
+    section .main .men_text h1 {
+        font-size: 32px;
+        top: 0;
+        left: 0;
+        text-align: center;
+    }
+    
+    section .main .men_text h1 span {
+        font-size: 36px;
+    }
+    
+    section .main .main_image img {
+        width: 100%;
+        max-width: 400px;
+        left: 0;
+        margin-top: 20px;
+    }
+    
+    section p {
+        width: 90%;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    
+    section .main_btn {
+        left: 0;
+        bottom: 0;
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* About Section */
+    .about {
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .about .about_main {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about .about_main .image img {
+        width: 100%;
+        max-width: 400px;
+        top: 0;
+    }
+    
+    .about .about_main .about_text h1 {
+        font-size: 35px;
+        bottom: 0;
+    }
+    
+    .about .about_main .about_text h3 {
+        font-size: 22px;
+        margin: 20px 0;
+    }
+    
+    .about .about_main .about_text p {
+        width: 100%;
+        text-align: center;
+        margin: 15px auto;
+    }
+    
+    .about .about_btn {
+        display: block;
+        text-align: center;
+        width: 150px;
+        margin: 30px auto;
+        left: 0;
+        bottom: 0;
+    }
+    
+    /* Menu Section */
+    .menu {
+        padding: 40px 20px;
+    }
+    
+    .menu h1 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    
+    .menu .menu_box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .menu .menu_box .menu_card {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .menu .menu_box .menu_card .menu_image {
+        width: 100%;
+    }
+    
+    /* Gallery Section */
+    .gallary {
+        padding: 40px 20px;
+    }
+    
+    .gallary h1 {
+        font-size: 35px;
+    }
+    
+    .gallary .gallary_image_box {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .gallary .gallary_image_box .gallary_image p {
+        width: 80%;
+        font-size: 14px;
+    }
+    
+    /* Review Section */
+    .review {
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .review h1 {
+        font-size: 35px;
+    }
+    
+    .review .review_box {
+        flex-direction: column;
+        margin: 30px auto;
+        align-items: center;
+    }
+    
+    .review .review_box .review_card {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 15px 0;
+    }
+    
+    /* Order Section */
+    .order {
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .order h1 {
+        font-size: 35px;
+    }
+    
+    .order .order_main {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .order .order_main .order_image img {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .order .order_main form {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    
+    .order .order_main form .order_btn {
+        grid-column: span 1;
+    }
+    
+    .order .order_main form .input input {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 30px 10px;
+    }
+    
+    footer .footer_main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    footer .footer_main .footer_tag h2 {
+        font-size: 20px;
+    }
+    
+}
+
+/* SMALL MOBILE DEVICES (up to 480px) */
+@media screen and (max-width: 480px) {
+    
+    section nav .logo img {
+        width: 50px;
+    }
+    
+    section nav ul li {
+        margin: 8px 15px;
+    }
+    
+    section nav ul li a {
+        font-size: 12px;
+    }
+    
+    section .main {
+        top: 70px;
+    }
+    
+    section .main .men_text h1 {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    
+    section .main .men_text h1 span {
+        font-size: 28px;
+    }
+    
+    section p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .about h1, 
+    .menu h1, 
+    .gallary h1, 
+    .review h1, 
+    .order h1 {
+        font-size: 28px;
+    }
+    
+    .about .about_main .about_text h3,
+    .about .about_main .about_text p {
+        font-size: 14px;
+    }
+    
+    .menu .menu_box .menu_card .menu_info h2 {
+        font-size: 18px;
+    }
+    
+    .review .review_box .review_card .review_profile img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .order .order_main form .order_btn p button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    footer .footer_main .footer_tag h2 {
+        font-size: 18px;
+    }
+    
+    footer .footer_main .footer_tag p {
+        font-size: 12px;
+    }
+    
+}
+
 ::-webkit-scrollbar{
     width: 13px;
 }

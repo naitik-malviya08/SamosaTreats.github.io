@@ -22,8 +22,9 @@ section nav{
     right: 0;
     left: 0;
     background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
     z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 section nav .logo img{
@@ -195,6 +196,16 @@ section .main_btn:hover i{
     position: relative;
     left: 55%;
     bottom: 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.about .about_btn:hover{
+    background: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(250, 192, 49, 0.3);
 }
 
 
@@ -244,7 +255,16 @@ section .main_btn:hover i{
     height: 480px;
     padding-top: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    position: relative;
+}
+
+.menu .menu_box .menu_card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 15px 35px rgba(250, 192, 49, 0.2);
 }
 
 .menu .menu_box .menu_card .menu_image{
@@ -336,6 +356,132 @@ section .main_btn:hover i{
     padding: 8px 10px;
     margin: 0 80px;
     transition: 0.3s;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn:hover{
+    background: #fac031;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(250, 192, 49, 0.3);
+}
+
+
+
+/*Features Section*/
+
+.features{
+    width: 100%;
+    padding: 70px 0;
+    background: linear-gradient(135deg, rgba(250, 192, 49, 0.1) 0%, rgba(250, 192, 49, 0.05) 100%);
+}
+
+.features h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.features h1 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.features h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.features_container{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+}
+
+.feature_card{
+    background: white;
+    padding: 40px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature_card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #fac031, #f8a400);
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.feature_card:hover::before{
+    left: 0;
+}
+
+.feature_card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(250, 192, 49, 0.3);
+    color: white;
+}
+
+.feature_card:hover h3,
+.feature_card:hover p{
+    color: white;
+}
+
+.feature_icon{
+    font-size: 50px;
+    color: #fac031;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #fac031;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+}
+
+.feature_card:hover .feature_icon{
+    color: white;
+    border-color: white;
+    transform: scale(1.1) rotateZ(10deg);
+}
+
+.feature_card h3{
+    font-size: 22px;
+    margin: 20px 0 15px 0;
+    color: #000;
+    transition: 0.3s ease;
+}
+
+.feature_card p{
+    line-height: 22px;
+    color: #666;
+    font-size: 14px;
+    transition: 0.3s ease;
 }
 
 
@@ -383,6 +529,16 @@ section .main_btn:hover i{
     align-items: center;
     justify-content: center;
     background: black;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.gallary .gallary_image_box .gallary_image:hover{
+    box-shadow: 0 10px 30px rgba(250, 192, 49, 0.3);
+    transform: scale(1.02);
 }
 
 .gallary .gallary_image_box .gallary_image img{
@@ -485,10 +641,20 @@ section .main_btn:hover i{
 .review .review_box .review_card{
     width: 350px;
     height: 535px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
     padding: 8px 20px;
     margin: 0 8px;
+    transition: 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.review .review_box .review_card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(250, 192, 49, 0.2);
+    border-color: #fac031;
 }
 
 .review .review_box .review_card .review_profile{
@@ -642,6 +808,16 @@ section .main_btn:hover i{
     gap: 10px;
     border-radius: 50px;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(250, 192, 49, 0.3);
+}
+
+.order .order_main form .order_btn p button:hover{
+    background: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .order .order_main form .order_btn img{
